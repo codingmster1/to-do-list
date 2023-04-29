@@ -19,3 +19,18 @@
     font-family: 'Over the Rainbow', cursive;
   }
 
+  body 
+
+  {
+
+    background: rgba(48, 64, 64, 1.0);
+    min-height: 100vh;
+    font-family: 'Over the Rainbow', cursive;
+    background: -webkit-radial-gradient(center, rgba(48, 64, 64, 1.0) 0%, rgba(0, 0, 0, 1.0) 100%);
+    background: -moz-radial-gradient(center, rgba(48, 64, 64, 1.0) 0%, rgba(0, 0, 0, 1.0) 100%);
+    background: radial-gradient(ellipse at center, rgba(48, 64, 64, 1.0) 0%, rgba(0, 0, 0, 1.0) 100%);
+
+  }
+
+  
+
