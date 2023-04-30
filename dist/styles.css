@@ -1,5 +1,5 @@
 *{
-    
+   
     padding: 0;
     margin: 0;
   }
@@ -7,22 +7,28 @@
   h1 
   {
     font-family: 'Caveat', cursive;
+    font-size: 70px;
+    background-color: black;
   }
 
   h2
   {
     font-family: 'Over the Rainbow', cursive;
+    font: size 60px;
+    background-color: black;
   }
 
   h3
   {
     font-family: 'Over the Rainbow', cursive;
+    background-color: black;
   }
 
   body 
 
   {
 
+    
     background: rgba(48, 64, 64, 1.0);
     min-height: 100vh;
     font-family: 'Over the Rainbow', cursive;
@@ -32,5 +38,50 @@
 
   }
 
+  
+
+  button {
+    height: fit-content;
+    cursor: pointer;
+    color: #04202c;
+    background-color: #c9d1c8;
+  }
+
+  .to-do-input button {
+    color: #5b7065;
+    font-family: inherit;
+    border: none;
+    padding: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+  
+
+  .app {
+    width: 600px;
+    margin: auto;
+    padding-top: 50px;
+    color: white;
+  }
+
+  .input-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    padding: 0px 0px 10px 0px;
+  }
+
+  .to-do-input input {
+    width: 250px;
+    font-family: inherit;
+    border: none;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    padding: 10px;
+    outline: none;
+  }
   
 
