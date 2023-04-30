@@ -150,11 +150,11 @@
     border: none;
     resize: none;
     line-height: 1.4;
-    color: rgb(250, 102, 102);
+    color: rgb(219, 56, 56);
     border-radius: 10px;
-    background-color: transparent;
-    font-size: 3.0rem;
-    font-family: 'Ysabeau', sans-serif;
+    background-color: transparent black;
+    font-size: 3.5rem;
+    font-family: inherit;
     font-weight: bold;
     transition: all 0.30s ease-in-out;
   }
