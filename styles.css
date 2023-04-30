@@ -53,15 +53,15 @@
   button {
     height: fit-content;
     cursor: pointer;
-    color: #04202c;
+    color: #c8d1d4;
     background-color: #c9d1c8;
     
   }
 
-  #enter
+ /* #enter
   {
     color: black;
-  }
+  }*/
 
   .to-do-input button {
     color: #5b7065;
@@ -87,7 +87,7 @@
     color: white;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
-    padding: 0px 5px 10px 0px;
+    padding: 0px 0px 10px 0px;
   }
 
   .to-do-input input {
@@ -98,7 +98,7 @@
     border-bottom-left-radius: 10px;
     padding: 10px;
     outline: none;
-    margin-top: 10px;
+    /*margin-top: 10px;*/
     
   }
   
@@ -109,12 +109,12 @@
     gap: 15px;
   }
 
-  .to-do-list i {
+  .to-do-list input {
     color: #c9d1c8;
     cursor: pointer;
   }
   
-  .to-do-list .fa-pen-to-square {
+  .to-do-list span {
     color: #5b7065;
   }
 
@@ -165,6 +165,7 @@
   .edit-controller {
     display: flex;
     gap: 5px;
+    
   }
   
   .update-controller {
