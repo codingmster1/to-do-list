@@ -28,8 +28,10 @@ function displayItems(){
                   <div class="input-controller">
                     <textarea disabled>${itemsArray[i]}</textarea>
                     <div class="edit-controller">
-                      <i class="fa-solid fa-check deleteBtn"></i>
-                      <span class="material-symbols-outlined">edit</span>
+                    <span class="material-symbols-outlined deleteBtn">
+                    delete
+                    </span>
+                      <span class="material-symbols-outlined editBtn">edit</span>
                     </div>
                   </div>
                   <div class="update-controller">
