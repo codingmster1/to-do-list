@@ -45,6 +45,7 @@ function displayItems(){
     activateEditListeners()
     activateSaveListeners()
     activateCancelListeners()
+    
   }
 
   function activateDeleteListeners(){
@@ -91,6 +92,7 @@ function displayItems(){
   function createItem(item){
     itemsArray.push(item.value)
     localStorage.setItem('items', JSON.stringify(itemsArray))
+    
     location.reload()
   }
   
@@ -110,3 +112,5 @@ function displayItems(){
     displayDate()
     displayItems()
   };
+
+  
