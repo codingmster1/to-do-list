@@ -9,6 +9,7 @@ document.querySelector("#item").addEventListener("keypress", (e) => {
 if(e.key === "Enter"){
     const item = document.querySelector("#item")
     createItem(item)
+    
 
 }
 
@@ -99,6 +100,7 @@ function displayItems(){
   function deleteItem(i){
     itemsArray.splice(i,1)
     localStorage.setItem('items', JSON.stringify(itemsArray))
+    
     location.reload()
   }
   
@@ -106,11 +108,13 @@ function displayItems(){
     itemsArray[i] = text
     localStorage.setItem('items', JSON.stringify(itemsArray))
     location.reload()
+    
   }
   
   window.onload = function() {
     displayDate()
     displayItems()
+    
   };
 
   
