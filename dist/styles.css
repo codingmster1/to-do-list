@@ -1,2 +1,284 @@
+html {
+    position: relative;
+    min-height: 100vh;
+}
+
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    
+}
+
+button, input {
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 340px 1fr;
+    grid-template-rows: auto 1fr;
+    min-height: 100vh;
+}
+
+/* header */
+
+.header {
+    
+    grid-column: 1 / 3;
+    background-color: var(--color2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 15px 0;
+}
+
+.logo {
+    display: flex;
+    gap: 10px;
+    height: 180px;
+}
+
+.header img {
+    width: 380px;
+    filter: var(--icon-filter1);
+}
+
+.menu-btn {
+    display: none;
+}
+
+
+/* side-bar */
+
+.sidebar {
+    background-color: var(--color3);
+    padding: 20px;
+}
+
+.sidebar-heading {
+    font-size: 24px;
+    font-weight: bold;
+    border-bottom: solid 2px var(--text-color);
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.home {
+    margin-bottom: 20px;
+}
+
+.link, .project-btn, .task-btn {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 7px 20px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+}
+
+.link:hover,
+.project-btn:hover,
+.project-link:hover {
+    background-color: var(--color3);
+    filter: var(--hover-filter);
+    cursor: pointer;
+}
+
+.sidebar img {
+    filter: var(--icon-filter2);
+    width: 30px;
+}
+
+.project-btn, .task-btn {
+    border: none;
+    background-color: inherit;
+    width: 100%;
+}
+
+.task-btn {
+    margin: 20px 0px;
+    padding-left: 60px;
+}
+
+.project-btn {
+    margin: 10px 0px;
+    padding-left: 30px;
+}
+
+.selected {
+    background-color: var(--color2);
+}
+
+.selected:hover {
+    background-color: var(--color2);
+    filter: var(--hover-filter);
+}
+
+/* Main */
+
+.main-content {
+    background-color: var(--color4);
+    padding: 40px 50px;
+}
+
+.content-heading {
+    background-color: var(--color2);
+    padding: 20px 25px;
+    font-size: 40px;
+    color: var(--color1);
+    font-family: 'Righteous', cursive;
+    border-radius: 5px;
+}
+
+.todo-container {
+    padding-top: 27px;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.task-main,
+.task-left,
+.task-right,
+.task-status,
+.priority-status,
+.task-edit-btn,
+.task-delete-btn {
+    display: flex;
+    align-items: center;
+}
+
+.task-div {
+    border: solid 1px var(--text-color);
+    border-radius: 5px;
+}
+
+.task-main {
+    justify-content: space-between;
+    padding: 7px 10px;
+    gap: 35px;
+}
+
+.task-div:hover {
+    cursor: pointer;
+    background-color: var(--color5);
+}
+
+.task-div:active {
+    transition: .2s;
+    transform: scale(0.993);
+}
+
+.task-left {
+    gap: 10px;
+    min-width: 150px;
+}
+
+.title-display,
+.details-display {
+    word-break: break-word;
+}
+
+.task-right {
+    gap: 7px;
+    font-size: 18px;
+    white-space: nowrap;
+}
+
+.task-right button {
+    border: none;
+    padding: 3px;
+    background-color: inherit;
+}
+
+.task-right button:hover {
+    background-color: var(--color5);
+    filter: var(--hover-filter);
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.task-incomplete:hover,
+.expand-task:hover {
+    filter: var(--hover-filter);
+}
+
+.priority-status {
+    margin-left: 20px;
+}
+
+.details-display {
+    padding: 0px 60px 5px;
+    font-size: 18px;
+}
+
+.task-div img {
+    filter: var(--icon-filter2);
+    width: 23px;
+}
+
+.task-btn img,
+.project-btn img {
+    filter: var(--icon-filter2);
+    width: 29px;
+}
+
+.task-btn:hover {
+    background-color: var(--color4);
+    filter: var(--hover-filter);
+    cursor: pointer;
+}
+
+/* Add task form */
+
+.task-form {
+    padding: 20px;
+    display: none;
+    background-color: var(--color5);
+    margin-top: 15px;
+    border-radius: 5px;
+}
+
+.task-form-div {
+    padding-bottom: 10px;
+}
+
+.type-normal label {
+    display: block;
+}
+
+.type-normal input {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.type-checkbox {
+    padding: 10px 0 20px;
+}
+
+.task-form-btns,
+.project-form-btns {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+/* Edit task */
+
+.edit-task-form {
+    display: none;
+    padding: 20px;
+}
+
+/* hides edit task input until action */
+.editing-task {
+    display: none;
+}
+
+/* Add project */
 
 
