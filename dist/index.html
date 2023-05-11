@@ -47,7 +47,79 @@
         </div>
     </div>
 <!--End of sidebar for tasks only-->
+<div class="projects">
+    <div class="sidebar-heading">Projects</div>
+    <div class="project-links"></div>
+    <form action="" method="post" class="edit-project-form">
+        <input type="text" id="edit-project-name" name="edit-project-name" class="edit-project-name-input" maxlength="30" required>
+        <div class="project-form-btns">
+            <button type="submit" class="edit-project-submit-btn">Save</button>
+            <button type="button" class="edit-project-cancel-btn">Cancel</button>
+        </div>
+    </form>
+    <form action="" method="post" class="project-form">
+        <input type="text" id="project-name" name="project-name" class="project-name-input" placeholder="Enter Project Name" maxlength="30" required>
+        <div class="project-form-btns">
+            <button type="submit" class="project-submit-btn">Add</button>
+            <button type="button" class="project-cancel-btn">Cancel</button>
+        </div>
+    </form>
+    <button class="project-btn"><img src="images/plus.svg">Add Project</button>
+</div>
+</div>
+<!-- End of projects -->
 
+<div class="main-content">
+    <div class="content-heading"></div>
+    <div class="todo-container"></div>
+    <form action="" method="post" class="edit-task-form">
+        <div class="task-form-div type-normal">
+            <label for="edit-title">Title:</label>
+            <input type="text" id="edit-title" name="edit-title" class="input" maxlength="60" required>
+        </div>
+        <div class="task-form-div type-normal">
+            <label for="edit-details">Details (optional):</label>
+            <input type="text" id="edit-details" name="edit-details" class="input" placeholder="Need to add more info about this task?" maxlength="200">
+        </div>
+        <div class="task-form-div type-normal">
+            <label for="edit-due-date">Due Date:</label>
+            <input type="date" id="edit-due-date" name="edit-due-date" class="date-input">
+        </div>
+        <div class="task-form-div type-checkbox">
+            <label for="edit-is-important">Priority task?</label>
+            <input type="checkbox" id="edit-is-important" name="edit-is-important" class="checkbox-input">
+        </div>
+        <div class="task-form-btns">
+            <button type="submit" class="edit-submit-btn">Save</button>
+            <button type="button" class="edit-cancel-btn">Cancel</button>
+        </div>
+    </form>
+
+    <!--Edit first form edit-->
+
+    <form action="" method="post" class="task-form">
+        <div class="task-form-div type-normal">
+            <label for="title">Title:</label>
+            <input type="text" id="title" name="title" class="input" placeholder="What to do?" maxlength="60" required>
+        </div>
+        <div class="task-form-div type-normal">
+            <label for="details">Details (optional):</label>
+            <input type="text" id="details" name="details" class="input" placeholder="Need to add more info about this task?" maxlength="200">
+        </div>
+        <div class="task-form-div type-normal">
+            <label for="due-date">Due Date:</label>
+            <input type="date" id="due-date" name="due-date" class="date-input">
+        </div>
+        <div class="task-form-div type-checkbox">
+            <label for="is-important">Priority task?</label>
+            <input type="checkbox" id="is-important" name="is-important" class="checkbox-input">
+        </div>
+        <div class="task-form-btns">
+            <button type="submit" class="submit-btn">Add</button>
+            <button type="button" class="cancel-btn">Cancel</button>
+        </div>
+    </form>
+</div>
 
   </div>
 <script src="main.js"></script>
