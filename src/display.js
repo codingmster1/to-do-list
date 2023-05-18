@@ -63,7 +63,7 @@ function displayTaskBtn() {
     taskBtn.classList.add('task-btn');
 
     const btnImage = document.createElement('img');
-    btnImage.src = './images/plus.svg';
+    btnImage.src = './images-pics/plus.svg';
 
     const btnText = document.createElement('div');
     btnText.textContent = 'Add Task';
@@ -113,9 +113,9 @@ function displayTask(task) {
     taskLeft.appendChild(taskStatus);
 
     const taskIncomplete = document.createElement('img');
-    taskIncomplete.src = './images/circle-unfilled.svg';
+    taskIncomplete.src = './images-pics/circle-unfilled.svg';
     const taskComplete = document.createElement('img');
-    taskComplete.src = './images/circle-filled.svg';
+    taskComplete.src = './images-pics/circle-filled.svg';
 
     const titleDisplay = document.createElement('div');
     titleDisplay.classList.add('title-display');
@@ -160,9 +160,9 @@ function displayTask(task) {
     taskRight.appendChild(priorityStatus);
 
     const noPriority = document.createElement('img');
-    noPriority.src = './dist/images/star-unfilled.svg';
+    noPriority.src = './images-pics/star-unfilled.svg';
     const priority = document.createElement('img');
-    priority.src = './dist/images-pics/star-filled.svg';
+    priority.src = './images-pics/star-filled.svg';
 
     // Style task depending on its priority status
     if (task.isImportant) {
@@ -180,7 +180,7 @@ function displayTask(task) {
     taskRight.appendChild(taskEditBtn);
 
     const editBtnImg = document.createElement('img');
-    editBtnImg.src = './dist/images-pics/edit.svg';
+    editBtnImg.src = './images-pics/edit.svg';
     taskEditBtn.appendChild(editBtnImg);
 
     taskEditBtn.onclick = editTask.bind(this, task, taskDiv, toDoContainer);
@@ -189,7 +189,7 @@ function displayTask(task) {
     taskRight.appendChild(taskDeleteBtn);
 
     const deleteBtnImg = document.createElement('img');
-    deleteBtnImg.src = './dist/images-pics/trash.svg';
+    deleteBtnImg.src = './images-pics/trash.svg';
     taskDeleteBtn.appendChild(deleteBtnImg);
 
     const currentIndex = myTaskList.indexOf(task);
@@ -324,7 +324,7 @@ function displayProject(project) {
     projectEditBtn.classList.add('project-edit-btn');
     projectLinkBtns.appendChild(projectEditBtn);
     const projectEditImg = document.createElement('img');
-    projectEditImg.src = './dist/images-pics/edit.svg';
+    projectEditImg.src = './images-pics/edit.svg';
     projectEditBtn.appendChild(projectEditImg);
 
     const projectDeleteBtn = document.createElement('button');
@@ -332,7 +332,7 @@ function displayProject(project) {
     projectLinkBtns.appendChild(projectDeleteBtn);
 
     const projectDeleteImg = document.createElement('img');
-    projectDeleteImg.src = './dist/images-pics/trash.svg';
+    projectDeleteImg.src = './images-pics/trash.svg';
     projectDeleteBtn.appendChild(projectDeleteImg);
 
     tabs.push(projectLink);
