@@ -50,7 +50,7 @@ function clearTaskForm() {
     isImportantInput.checked = false;
 }
 
-// Adds the new task when the 'add' button is clicked
+// Adds the new task when 'add' button is pressed
 addTaskBtn.addEventListener('click', (e) => {
     if (!addTaskForm.checkValidity()) {
         addTaskForm.reportValidity();
