@@ -145,7 +145,7 @@ button, input {
     background-color: var(--color2);
     padding: 20px 25px;
     font-size: 40px;
-    color: var(--color1);
+    color: #242424;
     font-family: 'Righteous', cursive;
     border-radius: 5px;
 }
