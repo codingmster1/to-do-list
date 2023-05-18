@@ -25,8 +25,8 @@ function getUncompletedTasks() {
     myTaskList.push.apply(myTaskList, storedUncompletedTasks);
 }
 
-// Pulls myTaskList and myProjectList from local storage to get stored tasks and projects
-// If the isCompleteArray is NOT empty, pulls completed and uncompleted task lists from local storage
+// Pulls data myTaskList and myProjectList to get stored tasks and projects
+// When isCompleteArray isn't empty, pulls all task lists from local storage
 function getLocalStorage() {
     const storedTasks = JSON.parse(localStorage.getItem("myTaskList"));
     myTaskList.length = 0;
