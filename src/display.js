@@ -136,7 +136,7 @@ function displayTask(task) {
     // Display 'expand' image if task has details
     if (task.details) {
         const expandTask = document.createElement('img');
-        expandTask.src = './images/expand-task.svg';
+        expandTask.src = './images-pics/expand-task.svg';
         taskLeft.appendChild(expandTask);
         expandTask.title = 'Click task to show details';
         expandTask.classList.add('expand-task');
@@ -160,9 +160,9 @@ function displayTask(task) {
     taskRight.appendChild(priorityStatus);
 
     const noPriority = document.createElement('img');
-    noPriority.src = './images/star-unfilled.svg';
+    noPriority.src = './dist/images/star-unfilled.svg';
     const priority = document.createElement('img');
-    priority.src = './images/star-filled.svg';
+    priority.src = './dist/images-pics/star-filled.svg';
 
     // Style task depending on its priority status
     if (task.isImportant) {
@@ -180,7 +180,7 @@ function displayTask(task) {
     taskRight.appendChild(taskEditBtn);
 
     const editBtnImg = document.createElement('img');
-    editBtnImg.src = './images/edit.svg';
+    editBtnImg.src = './dist/images-pics/edit.svg';
     taskEditBtn.appendChild(editBtnImg);
 
     taskEditBtn.onclick = editTask.bind(this, task, taskDiv, toDoContainer);
@@ -189,7 +189,7 @@ function displayTask(task) {
     taskRight.appendChild(taskDeleteBtn);
 
     const deleteBtnImg = document.createElement('img');
-    deleteBtnImg.src = './images/trash.svg';
+    deleteBtnImg.src = './dist/images-pics/trash.svg';
     taskDeleteBtn.appendChild(deleteBtnImg);
 
     const currentIndex = myTaskList.indexOf(task);
@@ -324,7 +324,7 @@ function displayProject(project) {
     projectEditBtn.classList.add('project-edit-btn');
     projectLinkBtns.appendChild(projectEditBtn);
     const projectEditImg = document.createElement('img');
-    projectEditImg.src = './images/edit.svg';
+    projectEditImg.src = './dist/images-pics/edit.svg';
     projectEditBtn.appendChild(projectEditImg);
 
     const projectDeleteBtn = document.createElement('button');
@@ -332,7 +332,7 @@ function displayProject(project) {
     projectLinkBtns.appendChild(projectDeleteBtn);
 
     const projectDeleteImg = document.createElement('img');
-    projectDeleteImg.src = './images/trash.svg';
+    projectDeleteImg.src = './dist/images-pics/trash.svg';
     projectDeleteBtn.appendChild(projectDeleteImg);
 
     tabs.push(projectLink);
