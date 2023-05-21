@@ -18,43 +18,71 @@
 </head>
 
 <body>
-    
-    <div class="wrapper">
-        <div class="header">
-            <div class="today">
-                <span class="date">21</span>
-                <span class="month_year">
-                    <span class="month">May</span>
-                    <span class="year">2023</span>
-                </span>
-            </div>
+    <header class="header">
+        <div class="logo">
+          <img src="./images-pics/cat-gif.gif">
+          <h1 class="page-name">Todo List</h1>
         </div>
-
-        <div class="todo_list">
-            <div class="listItem">
-
-
-                <p>
-                    Title <br>
-                    <small>25 June 2023</small>
-                </p>
-
-                <span></span>
-
+        <button class="button-open-nav" id="button-open-nav">
+          <i class="fas fa-bars"></i>
+        </button>
+      </header>
+      <main class="main">
+        <nav class="nav" id="nav">
+          <!-- Default projects -->
+          <div class="default-projects-list">
+            <button class="button-default-project" id="button-inbox-projects">
+              <img src="./images-pics/Google_Inbox.png">
+              Inbox
+            </button>
+            <button class="button-default-project" id="button-today-projects">
+              <img src="./images-pics/today.png">
+              Today
+            </button>
+            <button class="button-default-project" id="button-week-projects">
+              <img src="./images-pics/month2.png">
+              This week
+            </button>
+          </div>
+          <!-- User projects -->
+          <h1 class="projects-title">Projects</h1>
+          <div class="projects-list" id="projects-list"></div>
+          <button class="button-add-project" id="button-add-project">
+            <i class="fas fa-plus"></i>
+            Add Project
+          </button>
+          <div class="add-project-popup" id="add-project-popup">
+            <input
+              class="input-add-project-popup"
+              id="input-add-project-popup"
+              type="text"
+            />
+            <div class="add-project-popup-buttons">
+              <button
+                class="button-add-project-popup"
+                id="button-add-project-popup"
+              >
+                Add
+              </button>
+              <button
+                class="button-cancel-project-popup"
+                id="button-cancel-project-popup"
+              >
+                Cancel
+              </button>
             </div>
-
-            <div class="listItem complete">
-
-                <p>
-                    Completed<br>
-                    <small>05 July 2023</small>
-                </p>
-
-                <span></span>
-            </div>
-        </div>
-
-    </div>
+          </div>
+        </nav>
+        <!-- Tasks -->
+        <div class="project-preview" id="project-preview"></div>
+      </main>
+      <footer class="footer">
+        <p>Copyright © 2023 codingmster1</p>
+        <a href="https://github.com/codingmster1" target="_blank">
+          <i class="fab fa-github"></i
+        ></a>
+      </footer> 
+   
 <script src="main.js"></script>
 </body>
 </html>
