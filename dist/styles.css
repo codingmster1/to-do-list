@@ -1,0 +1,106 @@
+body 
+{
+    font-family: 'Roboto', sans-serif;
+    background-color: #eee;
+}
+
+.wrapper
+{
+    width: 400px;
+    margin: 10px auto;
+    padding: 10px;
+    padding-bottom: 50px;
+    
+}
+
+.header 
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 10px;
+    background: #fff;
+    border-bottom: 1px solid #aef177;
+    box-shadow: 10px 10px rgb(23, 173, 23);
+    
+}
+
+.header > div {
+    text-transform: uppercase;
+    
+}
+
+.today
+{
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+}
+
+.month_year
+{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    color: #888;
+    font-size: 12px;
+    margin-top: 2px;
+}
+
+.date 
+{
+    font-weight: bold;
+    font-size: 1.5em;
+    
+}
+
+.year 
+{
+    line-height: 15px;
+}
+
+.todo_list 
+{
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+    box-shadow: 10px 10px rgb(23, 173, 23);
+    background: #fff;
+}
+
+.listItem
+{
+    display: grid;
+    grid-template-columns: 9fr 1fr;
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.listItem p
+{
+font-weight: 500;
+}
+
+.listItem p small
+{
+font-weight: lighter;
+}
+
+.listItem span 
+{
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    background-color: #eee;
+    align-self: center;
+}
+
+.listItem.complete 
+{
+    color: #999;
+}
+
+.listItem.complete span 
+{
+    background-color: rgb(121, 152, 219);
+    border-color: #aef177;
+}
+
