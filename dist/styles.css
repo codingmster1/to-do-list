@@ -16,11 +16,12 @@ body{
 }
 
 .logoArea{
+  color: black;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  background-color: rgb(189, 237, 243);
+  background-color: rgb(211, 239, 243);
   font-size:2.5rem;
   padding:10px 20px;
   font-weight: 900;
@@ -38,7 +39,7 @@ body{
   transform: scale(0.9);
 }
 .hiddenMenu .material-symbols-rounded{
-  color: rgb(240, 190, 97);
+  color: rgb(17, 17, 17);
   transform:scale(1.3);
 
   pointer-events: none;
