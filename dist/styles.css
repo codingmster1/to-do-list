@@ -1,3 +1,312 @@
+html{
+  width: 100%;
+  height:100%;
+  margin:0;
+  padding: 0;
+  
+}
 
+body{
+  font-family: 'Pangolin', cursive;
+  margin:0;
+  padding:0;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
 
+.logoArea{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  /*background-color: var(--bgColor3);*/
+  font-size:2.5rem;
+  padding:10px 20px;
+  font-weight: 900;
+  /*border-bottom: solid 2px var(--accentDark);*/
+}
+.hiddenMenu{
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+      
+  padding:10px;
+  border-radius: 4px;
+}
+.hiddenMenu:active{
+  transform: scale(0.9);
+}
+.hiddenMenu .material-symbols-rounded{
+  /*color: var(--textColor);*/
+  transform:scale(1.3);
 
+  pointer-events: none;
+}
+.hiddenMenu:hover{
+  background-color: rgba(128, 128, 128, 0.267);
+}
+.logoLeft{
+  display: flex;
+  align-items: center;
+  /*color: var(--accent);*/
+}
+.logoLeft img{
+  width: 2.5rem;
+  height: 2.5rem;
+  padding-right:5px;
+}
+.logoLeft span{
+  /*color:var(--textColor);*/
+}
+.theme{
+  margin-right:0px;
+  user-select: none;
+}
+
+.content{
+  display:flex;
+  flex-direction: row;
+  box-sizing: border-box;
+  
+}
+
+/* css for .leftPanel */
+.leftPanel{
+  box-sizing: border-box;
+  background-color: var(--bgColor1);
+  display: flex;
+  flex-direction: column;
+  color:var(--textColor);
+  padding:20px;
+  width:350px;
+  user-select: none;
+}
+
+.leftPanel h2{
+  margin-top: 0;
+  padding-bottom:5px;
+  /*border-bottom: solid 2px var(--textColor);*/
+}
+.leftPanel .material-icons-round{
+  margin-right: 5px;
+  margin-left:10px;
+}
+.leftPanel img{
+  width: 27px;
+  height: 27px;
+  margin-right: 5px;
+  margin-left:10px;
+}
+
+.home{
+  display: flex;
+  flex-direction: column;
+}
+.project{
+  display: flex;
+  flex-direction: column;
+  margin-top: 15px;
+  
+}
+
+button, li, form, .tile{
+  /*font-family: '', sans-serif;*/
+  margin: 3px 0;
+  height: auto;
+  padding-top: 20px;
+  font-size: 1.125rem;
+  /*color: var(--textColor);*/
+  background: transparent;
+  padding:5px;
+  display:flex;
+  align-items: flex-start;
+  border-radius: 4px;
+  border: solid 2px transparent;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.leftPanel .tile:hover, 
+button:hover,
+form:hover{
+    background-color: rgb(245, 198, 110);
+}
+
+.projectInfo{
+    display: flex;
+    flex:1;
+}
+
+.selected{
+    border-bottom-left-radius: 0px;
+    border-top-left-radius: 0px;
+    border-left: solid 3px rgb(252, 171, 21)!important;
+    background-color: #6ff1dc70;
+}
+.selected:hover{
+    background-color: #3ab39e7a !important;
+}
+
+/* css for editProject part */
+.editContainer{
+  display: flex;
+  align-items: center;
+  margin-left:auto;
+  position: relative;             
+}
+.editContainer.active .option{
+  opacity: 1 !important; 
+  pointer-events: auto;
+  transform: translateY(0);
+}
+.option{
+  pointer-events: none;
+  display: flex;
+  opacity: 0;
+  flex-direction: column;
+  background: var(--textColor);
+  bottom:30px;
+  right:10px;
+  z-index: 2;
+  border-radius:3px;
+  background-color: rgb(235, 190, 108);
+  padding:4px;
+  box-shadow: 0 2px 5px rgba(0,0,0, 0.4);
+  transform: translateY(+10px) ;
+  transition: opacity 100ms ease-in-out, transform 100ms ease-in-out;
+  position:absolute;
+}
+
+.option > button{
+  /*color:black;*/
+  margin:0;
+}
+
+.project #projectForm, 
+.project #renameForm,
+#listForm,
+#editListForm{
+  display:flex;
+  flex:1;
+  align-items:flex-start;
+  opacity: 1;
+  pointer-events: auto;
+  position: relative;
+  transition-delay: 1s;
+  max-height: 500px;
+  transition: max-height 0.8s ease-out, opacity 300ms ease-in-out;
+}
+
+.hidden{
+  top:0;
+  left:0;
+  pointer-events: none !important;
+  position: absolute !important;
+  max-height:0 !important;
+
+  /* do nth but avoid opacity transition when position absolute */
+  transition: max-height 1s ease-out !important;    
+  opacity: 0 !important;
+}
+
+.projectIcon{
+  margin-top: 3px;
+}
+
+.formInput{
+  display:flex;
+}
+
+.inputField{
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  box-sizing: content-box;
+}
+input[type=text],
+textarea,
+input[type=date]{
+  width:100%;
+  box-sizing: border-box;
+  font-family: 'Pangolin', cursive;
+  font-size:1rem;
+  background-color: white;
+  border: solid 2px #273746;
+  border-radius: 3px;
+  padding:5px;
+  resize: none;
+}
+
+.formButtons{
+  margin-top:5px;
+  display: flex;
+  justify-content:center;
+  width: 100%;
+}
+.projectSubmitBtn,
+.projectCancelBtn,
+.rename-renameBtn,
+.rename-cancelBtn,
+.listSubmitBtn,
+.listCancelBtn,
+.editTaskSubmitBtn,
+.editTaskCancelBtn{
+  font-family: 'Pangolin', cursive;
+  width:70px;
+  margin:5px;
+  border: none;
+  border-radius: 3px;
+  color: white;
+  cursor: pointer;
+  padding:5px;
+  font-weight: bold;
+}
+
+.projectSubmitBtn,
+.rename-renameBtn,
+.listSubmitBtn,
+.editTaskSubmitBtn{
+    background-color: grey;
+}
+.projectCancelBtn,
+.rename-cancelBtn,
+.listCancelBtn,
+.editTaskCancelBtn{
+    background-color: rgb(190, 4, 4);
+}
+
+button:hover, 
+input[type="button"]:hover,
+input[type="submit"]:hover{
+    opacity: 0.9;
+}
+
+/* css for drag and drop event */
+.dragging{
+    opacity: 0.5;
+}
+
+.rightPanel{
+  /*background-color: rgb(231, 187, 106);*/
+  display: flex;
+  flex-direction: column;
+  padding: 30px 50px;
+  flex: 1;
+  min-height: 90vh;
+  box-sizing: border-box;
+}
+.title{
+  background-color: rgb(230, 178, 68);
+  height: 60px;
+  padding: 20px;
+  font-size:2.3rem;
+  color: #f7f5f5;
+  border-radius: 3px;
+  margin-bottom: 10px;
+}
+ul{
+  padding:0;
+  list-style-type:none;
+  color:rgb(243, 195, 107);
+}
